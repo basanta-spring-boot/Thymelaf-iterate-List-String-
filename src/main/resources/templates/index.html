@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:if="${greeting.list != null}">
+		<h1>Result</h1>
+		<ul>
+		<!-- 	<th:block th:object="${greeting}"> -->
+				<li th:each="item : *{greeting.list}" th:text="${item}">Item description
+					here...</li>
+			<!-- </th:block> -->
+		</ul>
+	</div>
+</body>
+</html>
